@@ -87,6 +87,8 @@ AC_SUBST(pkgvlibsdir, ["\${datadir}/${PACKAGE}-${API_VERSION}/libs"])
 AC_CONFIG_FILES([
 	Makefile
 
+	docs/Makefile
+
 	tools/Makefile
 	tools/maint/Makefile
 	tools/autotools/Makefile
