@@ -40,10 +40,11 @@ yaxx-to-grammar$(EXEEXT): Makefile yaxx-to-grammar.in
 		rm -f $@ $@.tmp ; \
 		exit 1 ; \
 	}
-CLEANFILES += yaxx-to-grammar
+CLEANFILES += yaxx-to-grammar$(EXEEXT)
 EXTRA_DIST += yaxx-to-grammar.in
 
 dist_man_MANS =					\
+	bison-to-grammar.1			\
 	yacc-to-grammar.1			\
 	yapp-to-grammar.1			\
 	yaxx-to-grammar.1
@@ -55,7 +56,7 @@ yacc-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
-		$(top_builddir)/yaxx-to-grammar
+		$(top_builddir)/yaxx-to-grammar$(EXEEXT)
 EXTRA_DIST += yacc-to-grammar.x
 
 yapp-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
@@ -65,8 +66,18 @@ yapp-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
-		$(top_builddir)/yaxx-to-grammar
+		$(top_builddir)/yaxx-to-grammar$(EXEEXT)
 EXTRA_DIST += yapp-to-grammar.x
+
+bison-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
+	$(HELP2MAN) \
+		--include=$(srcdir)/bison-to-grammar.x \
+		--source="FSF" \
+		--manual="User Commands" \
+		--section=1 \
+		--output=$@ \
+		$(top_builddir)/yaxx-to-grammar$(EXEEXT)
+EXTRA_DIST += bison-to-grammar.x
 
 yaxx-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
 	$(HELP2MAN) \
@@ -75,7 +86,7 @@ yaxx-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in configure.ac
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
-		$(top_builddir)/yaxx-to-grammar
+		$(top_builddir)/yaxx-to-grammar$(EXEEXT)
 EXTRA_DIST += yaxx-to-grammar.x
 
 install-yapp-to-grammar: yaxx-to-grammar
@@ -100,9 +111,20 @@ install-yacc-to-grammar: yaxx-to-grammar
 uninstall-yacc-to-grammar:
 	rm -f $(DESTDIR)$(bindir)/yacc-to-grammar$(EXEEXT)
 
-install-exec-hook: install-yapp-to-grammar install-yacc-to-grammar
+install-bison-to-grammar: yaxx-to-grammar
+	rm -f $(DESTDIR)$(bindir)/bison-to-grammar$(EXEEXT) && \
+	$(LN_S) $(DESTDIR)$(bindir)/yaxx-to-grammar$(EXEEXT) \
+	$(DESTDIR)$(bindir)/bison-to-grammar$(EXEEXT) || { \
+		rm -f $(DESTDIR)$(bindir)/bison-to-grammar$(EXEEXT) ; \
+		exit 1 ; \
+	}
 
-uninstall-hook:  uninstall-yapp-to-grammar uninstall-yacc-to-grammar
+uninstall-bison-to-grammar:
+	rm -f $(DESTDIR)$(bindir)/bison-to-grammar$(EXEEXT)
+
+install-exec-hook: install-yapp-to-grammar install-yacc-to-grammar install-bison-to-grammar
+
+uninstall-hook:  uninstall-yapp-to-grammar uninstall-yacc-to-grammar uninstall-bison-to-grammar
 
 #
 # NOTE:

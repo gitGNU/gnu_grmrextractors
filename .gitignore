@@ -15,6 +15,7 @@ autom4te.cache
 
 ChangeLog
 
+bison-to-grammar.1
 yacc-to-grammar.1
 yapp-to-grammar.1
 yaxx-to-grammar.1
