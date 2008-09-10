@@ -1,0 +1,15 @@
+# Input file for perl-autofrisk
+
+files-glob yaxx-to-grammar.in
+
+#non-critical-internal Choicetool::.*
+
+non-critical-external strict[ \t]*.*
+non-critical-external diagnostics[ \t]*.*
+non-critical-external warnings[ \t]*.*
+non-critical-external vars[ \t]*.*
+non-critical-external [0-9]\..*
+non-critical-external POSIX[ \t]*.*
+non-critical-external base[ \t]*.*
+non-critical-external Getopt::Long[ \t]*.*
+non-critical-external Text::Balanced[ \t]*.*
