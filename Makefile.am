@@ -25,7 +25,7 @@ ACLOCAL_AMFLAGS = -I tools/autotools/m4
 SUBDIRS =					\
 	tools					\
 	.					\
-	docs
+	man
 
 EXTRA_DIST =
 CLEANFILES =
