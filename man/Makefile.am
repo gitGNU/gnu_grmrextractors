@@ -32,7 +32,7 @@ dist_man_MANS =					\
 yacc-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in $(top_srcdir)/configure.ac
 	$(HELP2MAN) \
 		--include=$(srcdir)/yacc-to-grammar.x \
-		--source="FSF" \
+		--source="@PACKAGE_NAME@" \
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
@@ -42,7 +42,7 @@ EXTRA_DIST += yacc-to-grammar.x
 yapp-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in $(top_srcdir)/configure.ac
 	$(HELP2MAN) \
 		--include=$(srcdir)/yapp-to-grammar.x \
-		--source="FSF" \
+		--source="@PACKAGE_NAME@" \
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
@@ -52,7 +52,7 @@ EXTRA_DIST += yapp-to-grammar.x
 bison-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in $(top_srcdir)/configure.ac
 	$(HELP2MAN) \
 		--include=$(srcdir)/bison-to-grammar.x \
-		--source="FSF" \
+		--source="@PACKAGE_NAME@" \
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
@@ -62,7 +62,7 @@ EXTRA_DIST += bison-to-grammar.x
 yaxx-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in $(top_srcdir)/configure.ac
 	$(HELP2MAN) \
 		--include=$(srcdir)/yaxx-to-grammar.x \
-		--source="FSF" \
+		--source="@PACKAGE_NAME@" \
 		--manual="User Commands" \
 		--section=1 \
 		--output=$@ \
