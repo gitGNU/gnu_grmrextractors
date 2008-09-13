@@ -1,2 +1,2 @@
 [name]
-yaxx-to-grammar \- insert comment here
+yaxx-to-grammar \- extract grammar from parser description

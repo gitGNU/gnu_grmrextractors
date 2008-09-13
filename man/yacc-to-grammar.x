@@ -1,2 +1,2 @@
 [name]
-yacc-to-grammar \- insert comment here
+yacc-to-grammar \- extract grammar from yacc parser description

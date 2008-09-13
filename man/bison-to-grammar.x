@@ -1,2 +1,2 @@
 [name]
-bison-to-grammar \- insert comment here
+bison-to-grammar \- extract grammar from bison parser description

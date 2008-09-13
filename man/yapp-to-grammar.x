@@ -1,2 +1,2 @@
 [name]
-yapp-to-grammar \- insert comment here
+yapp-to-grammar \- extract grammar from yapp parser description
