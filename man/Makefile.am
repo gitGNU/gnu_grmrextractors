@@ -105,3 +105,10 @@ uninstall-bison-to-grammar:
 install-exec-hook: install-yapp-to-grammar install-yacc-to-grammar install-bison-to-grammar
 
 uninstall-hook:  uninstall-yapp-to-grammar uninstall-yacc-to-grammar uninstall-bison-to-grammar
+
+##
+## Maintainer related targets
+##
+update-local: Makefile
+
+maintainer-check-local: Makefile
