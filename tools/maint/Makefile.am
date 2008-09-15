@@ -23,10 +23,12 @@ include $(top_srcdir)/Makefile.sub
 EXTRA_DIST =					\
 	fetch.in				\
 	whitespace-detect.in			\
-        git-version-gen				\
-        gitlog-to-changelog			\
-	announce-gen				\
-	perl-autofrisk
+	gitlog-to-committers.in			\
+	perl-autofrisk				\
+	\
+	git-version-gen				\
+	gitlog-to-changelog			\
+	announce-gen
 
 ##
 ## Maintainer related targets
