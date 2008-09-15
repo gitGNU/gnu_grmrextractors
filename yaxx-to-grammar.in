@@ -98,6 +98,30 @@ exit(0);
     my $input = <$in_fh>;
     close $in_fh;
 
+    # Cleaning up (thanks to "perlfaq6"! ;-)
+    $input =~ s{
+		 \#[^\n]*                     # Perl comments and
+                                              # C/C++ preprocessor.
+		 |
+		 /\*[^*]*\*+([^/*][^*]*\*+)*/ # C/C++ comments.
+		 |
+		 //[^\n]*                     # C++ comments.
+		 |
+		 %\{.*%\}                     # Header's code block.
+		 |
+		 (
+		   "(\\.|[^"\\])*"            # Preserve double,
+		   |
+		   '(\\.|[^'\\])*'            # single quoted strings
+		   |
+		   .[^/"'\\]*                 # and other stuff.
+		 )
+	      }
+	      {
+		  defined $2 ? $2 : ""
+	      }gsex;
+
+    # Clean up useless spaces
     $input =~ s/^\s*//;
     $input =~ s/\s*$//;
 
@@ -117,7 +141,7 @@ exit(0);
     # Handle declarations, extract the start symbol
     my $start;
 
-    $declarations =~ /\s*\%start\s+(.*)\s*\n/;
+    $declarations =~ /\s*\%start\s+([^\s]+)\s*\n/;
     $start = $1;
 
     defined($start) or fatal("Missing start symbol in declarations");
