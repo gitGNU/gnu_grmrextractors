@@ -5,7 +5,7 @@ common = {
 };
 
 vars = {
-	var-sitename = "FChains";
+	var-sitename = "Grammar Extractors";
 };
 
 include "contents.as"
