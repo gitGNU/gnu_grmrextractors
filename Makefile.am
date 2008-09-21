@@ -25,7 +25,8 @@ ACLOCAL_AMFLAGS = -I tools/autotools/m4
 SUBDIRS =					\
 	tools					\
 	.					\
-	man
+	man					\
+	site
 
 EXTRA_DIST =
 CLEANFILES =
@@ -71,6 +72,24 @@ dist-hook:
 ##
 ## Maintainer related targets
 ##
+
+announcement:
+	$(ANNOUNCE_GEN)				\
+	  --release-type=alpha			\
+	  --package=$(PACKAGE_TARNAME)		\
+	  --prev=$(PACKAGE_VERSION).test	\
+	  --curr=$(PACKAGE_VERSION)		\
+	  --gpg-key-id=TEST			\
+	  --url-dir=TEST
+
+dist-hook:
+	$(GITLOG_TO_CHANGELOG) > $(distdir)/ChangeLog || {	\
+		rm -f ChangeLog ;				\
+		exit 1 ;					\
+	}
+
+site: all
+	(cd site && $(MAKE) $(AM_MAKEFLAGS) site)
 
 HOST = "http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;hb=HEAD;f="
 
