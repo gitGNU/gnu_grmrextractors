@@ -35,3 +35,7 @@ tools/autotools/texinfo.tex
 tools/maint/fetch
 tools/maint/whitespace-detect
 tools/maint/gitlog-to-committers
+
+site/in/.sitetool
+site/in/site.stamp
+site/out/*
