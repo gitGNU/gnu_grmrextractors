@@ -8,7 +8,7 @@ pages = {
 			footer = "footer";
 		};
 		vars = {
-			title = "FChains";
+			title = "Grammar Extractors";
 			css   = "site.css";
 		};
 	};
