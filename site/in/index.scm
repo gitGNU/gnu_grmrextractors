@@ -1,7 +1,7 @@
 (h3 "DESCRIPTION")
 (p "Grammar Extractors is a suite of simple scripts, useful to extract "
-   "grammars from Yacc/Yapp/Bison input files to be later processed with "
-   "other utilities.")
+   "grammars from Yacc/Yapp/Bison input files. The output is suitable for "
+   "later processing via utilities or scripts.")
 
 (h3 "COPYING")
 (p "The project is licensed under the "
