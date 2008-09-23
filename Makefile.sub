@@ -32,6 +32,7 @@ do_subst_AUTOTOOLS = \
   -e 's,[@]SHELL[@],$(SHELL),g' \
   \
   -e 's,[@]bindir[@],$(bindir),g' \
+  -e 's,[@]srcdir[@],$(srcdir),g' \
   -e 's,[@]builddir[@],$(builddir),g' \
   -e 's,[@]abs_builddir[@],$(abs_builddir),g' \
   -e 's,[@]abs_top_srcdir[@],$(abs_top_srcdir),g' \
