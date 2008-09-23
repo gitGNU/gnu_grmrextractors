@@ -64,12 +64,6 @@ EXTRA_DIST +=							\
 	configure.ac.in						\
 	perl.af
 
-dist-hook:
-	$(GITLOG_TO_CHANGELOG) > $(distdir)/ChangeLog || {	\
-		rm -f ChangeLog ;				\
-		exit 1 ;					\
-	}
-
 ##
 ## Maintainer related targets
 ##
