@@ -36,6 +36,11 @@ tools/maint/fetch
 tools/maint/whitespace-detect
 tools/maint/gitlog-to-committers
 
+tests/defs
+tests/wrapper
+tests/testSubDir-*
+tests/test-1
+
 site/in/.sitetool
 site/in/site.stamp
 site/out/*
