@@ -3,6 +3,16 @@
    "grammars from Yacc/Yapp/Bison input files. The output is suitable for "
    "later processing via utilities or scripts.")
 
+(p "The following extractors are available:")
+(ul
+ (li "yacc-to-grammar")
+ (li "yapp-to-grammar")
+ (li "bison-to-grammar")
+)
+
+(p "Each extractor has the following invocation convention:"
+   (pre "<extractor> INFILE OUTFILE"))
+
 (h3 "COPYING")
 (p "The project is licensed under the "
    (a (@ (href "http://www.gnu.org/licenses/licenses.html"))
