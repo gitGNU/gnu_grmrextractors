@@ -1,7 +1,10 @@
 (h3 "DESCRIPTION")
-(p "Grammar Extractors is a suite of simple scripts, useful to extract "
-   "grammars from Yacc/Yapp/Bison input files. The output is suitable for "
-   "later processing via utilities or scripts.")
+(p "Grammar Extractors is a suite of scripts "
+   "useful for extracting grammar descriptions from "
+   (i "Yacc") ", " (i "Yapp") " and " (i "Bison ")
+   "input files. "
+   "The output should be suitable for "
+   "later processing via others utilities or scripts.")
 
 (p "The following extractors are available:")
 (ul
@@ -11,7 +14,8 @@
 )
 
 (p "Each extractor has the following invocation convention:"
-   (pre "<extractor> INFILE OUTFILE"))
+   (p (@ (class "terminal"))
+      "$ <extractor> INFILE OUTFILE"))
 
 (h3 "COPYING")
 (p "The project is licensed under the "
@@ -62,10 +66,9 @@
 
 (h4 "Getting a copy of the Git Repository")
 (p "Anonymous checkout: "
-   (br)
-   (br)
-   (kbd (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
-	" clone git://git.savannah.nongnu.org/grmrextractors.git"))
+   (p (@ class "terminal")
+      (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
+      " clone git://git.savannah.nongnu.org/grmrextractors.git"))
 
 (h4 "Contribute")
 (p "If you have time and programming skills, you can help us by developing "
