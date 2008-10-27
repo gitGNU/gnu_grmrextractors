@@ -13,9 +13,9 @@
  (li "bison-to-grammar")
 )
 
-(p "Each extractor has the following invocation convention:"
-   (p (@ (class "terminal"))
-      "$ <extractor> INFILE OUTFILE"))
+(p "Each extractor has the following invocation convention:")
+(p (@ (class "terminal"))
+   "$ <extractor> INFILE OUTFILE")
 
 (h3 "COPYING")
 (p "The project is licensed under the "
@@ -65,10 +65,10 @@
    "differences among two versions.")
 
 (h4 "Getting a copy of the Git Repository")
-(p "Anonymous checkout: "
-   (p (@ class "terminal")
-      (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
-      " clone git://git.savannah.nongnu.org/grmrextractors.git"))
+(p "Anonymous checkout: ")
+(p (@ class "terminal")
+   (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
+   " clone git://git.savannah.nongnu.org/grmrextractors.git")
 
 (h4 "Contribute")
 (p "If you have time and programming skills, you can help us by developing "
