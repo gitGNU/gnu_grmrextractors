@@ -11,11 +11,11 @@
  (li "yacc-to-grammar")
  (li "yapp-to-grammar")
  (li "bison-to-grammar")
-)
+ )
 
 (p "Each extractor has the following invocation convention:")
-(p (@ (class "terminal"))
-   "$ <extractor> INFILE OUTFILE")
+(pre (@ (class "terminal"))
+     "$ <extractor> INFILE OUTFILE")
 
 (h3 "COPYING")
 (p "The project is licensed under the "
@@ -66,9 +66,9 @@
 
 (h4 "Getting a copy of the Git Repository")
 (p "Anonymous checkout: ")
-(p (@ class "terminal")
-   (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
-   " clone git://git.savannah.nongnu.org/grmrextractors.git")
+(pre (@ class "terminal")
+     (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
+     " clone git://git.savannah.nongnu.org/grmrextractors.git")
 
 (h4 "Contribute")
 (p "If you have time and programming skills, you can help us by developing "
