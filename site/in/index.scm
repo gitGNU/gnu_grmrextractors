@@ -1,8 +1,8 @@
 (h3 "DESCRIPTION")
 (p "Grammar Extractors is a suite of scripts "
    "useful for extracting grammar descriptions from "
-   (i "Yacc") ", " (i "Yapp") " and " (i "Bison ")
-   "input files. "
+   (i "Yacc") ", " (i "Yapp") " and " (i "Bison")
+   " input files. "
    "The output should be suitable for "
    "later processing via others utilities or scripts.")
 
@@ -26,9 +26,8 @@
 (p "Francesco Salvestrini <salvestrini AT gmail DOT com>")
 
 (h3 "AUTHORS")
-(p "Francesco Salvestrini <salvestrini AT gmail DOT com>"
-   (br)
-   "Alessandro Massignan <ff0000 DOT it AT gmail DOT com>")
+(p "Francesco Salvestrini <salvestrini AT gmail DOT com>")
+(p "Alessandro Massignan <ff0000 DOT it AT gmail DOT com>")
 
 (h3 "RELEASES")
 (p "Sorry, no public release available at the moment.")
@@ -47,10 +46,8 @@
    "<grmrextractors-generic AT nongnu DOT org>. "
    "An easy way to collect all the required information, such as platform and "
    "compiler, is to include in your report the config.log file available at "
-   "the end of the configuration procedure. "
-   (br)
-   (br)
-   "If you have a patch for a bug that hasn't yet been fixed in "
+   "the end of the configuration procedure.")
+(p "If you have a patch for a bug that hasn't yet been fixed in "
    "the latest repository sources, please be so kind to create it using the "
    "repository sources, not the release sources.")
 
@@ -65,7 +62,7 @@
    "differences among two versions.")
 
 (h4 "Getting a copy of the Git Repository")
-(p "Anonymous checkout: ")
+(p "Anonymous checkout:")
 (pre (@ class "terminal")
      (a (@ (href "http://savannah.gnu.org/maintenance/UsingGit")) "git")
      " clone git://git.savannah.nongnu.org/grmrextractors.git")
@@ -77,8 +74,6 @@
    (a (@ (href "http://lists.nongnu.org/mailman/listinfo/grmrextractors-generic"))
       "mailing list")
    ", drop us a mail and start coding. Send your code to the "
-   "mailing list under the form of patches for the current revision system."
-   (br)
-   (br)
-   "If you have time but no programming skills, you can help with "
+   "mailing list under the form of patches for the current revision system.")
+(p "If you have time but no programming skills, you can help with "
    "documentation,  packaging, tests before releases etc ...")
