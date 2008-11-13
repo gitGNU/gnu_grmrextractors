@@ -6,7 +6,7 @@
    "The output should be suitable for "
    "later processing via others utilities or scripts.")
 
-(p "The following extractors are available:")
+(p "The following extractors are currently available:")
 (ul
  (li "yacc-to-grammar")
  (li "yapp-to-grammar")
@@ -52,6 +52,7 @@
    "repository sources, not the release sources.")
 
 (h3 "DEVELOPMENT")
+
 (h4 "Browsing sources")
 (p "You can browse the "
    (a (@ (href "http://git.savannah.nongnu.org/gitweb/?p=grmrextractors.git"))
