@@ -13,7 +13,9 @@ Makefile
 aclocal.m4
 autom4te.cache
 
-ChangeLog
+#ChangeLog
+VERSION
+TODO
 
 bison-to-grammar.1
 yacc-to-grammar.1
