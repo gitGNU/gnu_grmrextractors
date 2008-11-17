@@ -47,11 +47,11 @@ yaxx-to-grammar$(EXEEXT): Makefile yaxx-to-grammar.in
 CLEANFILES += yaxx-to-grammar$(EXEEXT)
 EXTRA_DIST += yaxx-to-grammar.in
 
-#
-# NOTE:
-#     Options listed in AUTOMAKE_OPTIONS variable are applied on a
-#     per-`Makefile' basis.
-#
+##
+## NOTE:
+##     Options listed in AUTOMAKE_OPTIONS variable are applied on a
+##     per-`Makefile' basis.
+##
 AUTOMAKE_OPTIONS = check-news
 
 ##
