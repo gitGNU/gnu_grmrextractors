@@ -35,7 +35,7 @@ CLEANFILES =
 bin_SCRIPTS =					\
         yaxx-to-grammar
 
-yaxx-to-grammar$(EXEEXT): Makefile yaxx-to-grammar.in
+yaxx-to-grammar: Makefile yaxx-to-grammar.in
 	( rm -f $@ $@.tmp && \
 	  $(do_subst) < $(srcdir)/yaxx-to-grammar.in > $@.tmp && \
 	  chmod +x $@.tmp && \
@@ -44,7 +44,7 @@ yaxx-to-grammar$(EXEEXT): Makefile yaxx-to-grammar.in
 		rm -f $@ $@.tmp ; \
 		exit 1 ; \
 	}
-CLEANFILES += yaxx-to-grammar$(EXEEXT)
+CLEANFILES += yaxx-to-grammar
 EXTRA_DIST += yaxx-to-grammar.in
 
 ##
