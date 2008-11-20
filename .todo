@@ -6,4 +6,7 @@
     <note priority="medium" time="1226593277">
         Add test-cases to the regression-tests suite
     </note>
+    <note priority="low" time="1227122777">
+        Rearrange the build process in order to use EXEEXT (if needed)
+    </note>
 </todo>
