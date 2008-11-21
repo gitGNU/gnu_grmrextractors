@@ -62,7 +62,8 @@ EXTRA_DIST +=							\
 	BUGS TODO README NEWS COPYING AUTHORS INSTALL THANKS	\
 	bootstrap						\
 	configure.ac.in						\
-	perl.af
+	perl.af							\
+	.todo
 
 ##
 ## Maintainer related targets
