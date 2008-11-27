@@ -41,6 +41,8 @@ tools/maint/gitlog-to-committers
 tests/defs
 tests/wrapper
 tests/testSubDir-*
+tests/test-success
+tests/test-fail
 tests/test-1
 
 site/in/.sitetool
