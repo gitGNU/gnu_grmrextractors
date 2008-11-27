@@ -72,12 +72,39 @@ EXTRA_DIST += defs.in
 FAIL_TESTS    =
 SUCCESS_TESTS =
 
-FAIL_TESTS    +=
+FAIL_TESTS    +=				\
+	test-fail
+
 SUCCESS_TESTS +=				\
+	test-success				\
 	test-1
 
 XFAIL_TESTS  = $(FAIL_TESTS)
 TESTS        = $(FAIL_TESTS) $(SUCCESS_TESTS)
+
+test-success: $(srcdir)/test-success.in Makefile
+	( rm -f $@ $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-success.in > $@.tmp && \
+	  chmod +x $@.tmp && \
+	  chmod a-w $@.tmp && \
+	  mv -f $@.tmp $@ ) || { \
+	        rm -f $@ $@.tmp ; \
+	        exit 1 ; \
+	}
+EXTRA_DIST += test-success.in
+CLEANFILES += test-success
+
+test-fail: $(srcdir)/test-fail.in Makefile
+	( rm -f $@ $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-fail.in > $@.tmp && \
+	  chmod +x $@.tmp && \
+	  chmod a-w $@.tmp && \
+	  mv -f $@.tmp $@ ) || { \
+	        rm -f $@ $@.tmp ; \
+	        exit 1 ; \
+	}
+EXTRA_DIST += test-fail.in
+CLEANFILES += test-fail
 
 test-1: $(srcdir)/test-1.in Makefile
 	( rm -f $@ $@.tmp && \
