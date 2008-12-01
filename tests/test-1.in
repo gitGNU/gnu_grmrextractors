@@ -21,7 +21,7 @@
 
 datadir=@srcdir@/data
 
-. @builddir@/defs
+. $testdir/defs || exit 1
 
 $WRAPPER yaxx-to-grammar ./choicetool.yp ./choicetool.out || exit 1
 diff ./choicetool.out ./choicetool.exp    || exit 1
