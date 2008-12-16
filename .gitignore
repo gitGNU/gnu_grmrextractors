@@ -45,6 +45,7 @@ tests/test-success
 tests/test-fail
 tests/test-yapp-01
 tests/test-bison-01
+tests/test-bison-02
 
 site/in/.sitetool
 site/in/site.stamp
