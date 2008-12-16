@@ -77,7 +77,9 @@ FAIL_TESTS    +=				\
 
 SUCCESS_TESTS +=				\
 	test-success				\
-	test-1
+	test-yapp-01				\
+	test-bison-01				\
+	test-bison-02
 
 XFAIL_TESTS  = $(FAIL_TESTS)
 TESTS        = $(FAIL_TESTS) $(SUCCESS_TESTS)
@@ -106,17 +108,41 @@ test-fail: $(srcdir)/test-fail.in Makefile
 EXTRA_DIST += test-fail.in
 CLEANFILES += test-fail
 
-test-1: $(srcdir)/test-1.in Makefile
+test-yapp-01: $(srcdir)/test-yapp-01.in Makefile
 	( rm -f $@ $@.tmp && \
-	  $(do_subst) < $(srcdir)/test-1.in > $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-yapp-01.in > $@.tmp && \
 	  chmod +x $@.tmp && \
 	  chmod a-w $@.tmp && \
 	  mv -f $@.tmp $@ ) || { \
 	        rm -f $@ $@.tmp ; \
 	        exit 1 ; \
 	}
-EXTRA_DIST += test-1.in
-CLEANFILES += test-1
+EXTRA_DIST += test-yapp-01.in
+CLEANFILES += test-yapp-01
+
+test-bison-01: $(srcdir)/test-bison-01.in Makefile
+	( rm -f $@ $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-bison-01.in > $@.tmp && \
+	  chmod +x $@.tmp && \
+	  chmod a-w $@.tmp && \
+	  mv -f $@.tmp $@ ) || { \
+	        rm -f $@ $@.tmp ; \
+	        exit 1 ; \
+	}
+EXTRA_DIST += test-bison-01.in
+CLEANFILES += test-bison-01
+
+test-bison-02: $(srcdir)/test-bison-02.in Makefile
+	( rm -f $@ $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-bison-02.in > $@.tmp && \
+	  chmod +x $@.tmp && \
+	  chmod a-w $@.tmp && \
+	  mv -f $@.tmp $@ ) || { \
+	        rm -f $@ $@.tmp ; \
+	        exit 1 ; \
+	}
+EXTRA_DIST += test-bison-02.in
+CLEANFILES += test-bison-02
 
 clean-local:
 	rm -rf testSubDir-*
