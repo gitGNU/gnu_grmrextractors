@@ -43,7 +43,8 @@ tests/wrapper
 tests/testSubDir-*
 tests/test-success
 tests/test-fail
-tests/test-1
+tests/test-yapp-01
+tests/test-bison-01
 
 site/in/.sitetool
 site/in/site.stamp
