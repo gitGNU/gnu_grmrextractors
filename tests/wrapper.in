@@ -33,6 +33,6 @@ program=$1
 
 shift
 
-parameters=$@
+#parameters=$@
 
-exec @abs_top_builddir@/$program $parameters || exit 1
+exec @abs_top_builddir@/$program "$@" || exit 1
