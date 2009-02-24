@@ -78,6 +78,7 @@ FAIL_TESTS    +=				\
 SUCCESS_TESTS +=				\
 	test-success				\
 	test-yapp-01				\
+	test-yapp-02				\
 	test-bison-01				\
 	test-bison-02
 
@@ -119,6 +120,18 @@ test-yapp-01: $(srcdir)/test-yapp-01.in Makefile
 	}
 EXTRA_DIST += test-yapp-01.in
 CLEANFILES += test-yapp-01
+
+test-yapp-02: $(srcdir)/test-yapp-02.in Makefile
+	( rm -f $@ $@.tmp && \
+	  $(do_subst) < $(srcdir)/test-yapp-02.in > $@.tmp && \
+	  chmod +x $@.tmp && \
+	  chmod a-w $@.tmp && \
+	  mv -f $@.tmp $@ ) || { \
+	        rm -f $@ $@.tmp ; \
+	        exit 1 ; \
+	}
+EXTRA_DIST += test-yapp-02.in
+CLEANFILES += test-yapp-02
 
 test-bison-01: $(srcdir)/test-bison-01.in Makefile
 	( rm -f $@ $@.tmp && \
