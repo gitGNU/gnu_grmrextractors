@@ -76,7 +76,7 @@ sub fatal ($)
 $ME ($PACKAGE) $VERSION
 
 Copyright (C) 2008 Francesco Salvestrini
-                   Alessandro Massignan
+		   Alessandro Massignan
 
 This is free software.  You may redistribute copies of it under the terms of
 the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
@@ -101,7 +101,7 @@ exit(0);
     # Cleaning up (thanks to "perlfaq6"! ;-)
     $input =~ s{
 		 \#[^\n]*                     # Perl comments and
-                                              # C/C++ preprocessor.
+					      # C/C++ preprocessor.
 		 |
 		 /\*[^*]*\*+([^/*][^*]*\*+)*/ # C/C++ comments.
 		 |
@@ -129,22 +129,24 @@ exit(0);
     my $declarations;
     my $grammar;
 
-    if (!(($input =~ m/^(.*)\s%%\s(.*)\s%%\s.*$/s) ||
-	  ($input =~ m/^(.*)\s%%\s(.*)/s))) {
-	fatal("Wrong input file format");
+    {
+	if (!(($input =~ m/^(.*)\s%%\s(.*)\s%%\s.*$/s) ||
+	      ($input =~ m/^(.*)\s%%\s(.*)\s%%\s*$/s)  ||
+	      ($input =~ m/^(.*)\s%%\s(.*)/s))) {
+	    fatal("Wrong input file format");
+	}
+	$declarations = $1;
+	$grammar      = $2;
     }
-    $declarations = $1;
-    $grammar      = $2;
-
-    defined($grammar) or fatal("Wrong grammar section in input file ?");
+    defined($grammar) or fatal("Wrong grammar section in input file?");
 
     # Handle declarations, extract the start symbol
     my $start;
 
-    $declarations =~ /\s*\%start\s+([^\s]+)\s*\n/;
-    $start = $1;
-
-    defined($start) or fatal("Missing start symbol in declarations");
+    {
+	$declarations =~ m/\s*%start\s+([^\s]+)\s*\n/s;
+	$start = $1;
+    }
 
     # Begin parsing and cleaning
     my $output;
@@ -211,6 +213,15 @@ exit(0);
 	    fatal("Bug hit!");
 	}
     }
+
+    # If start symbol is not defined take the first nonterminal
+    # one
+    if (!defined($start)) {
+	$output =~ m/^\s*([^\s]+)\s*:/s;
+	$start = $1;
+    }
+    defined($start) or fatal("Missing start symbol in declarations");
+
     $output = "Start symbol " . $start . "\n\n" . $output;
 
     # Finally write the output
