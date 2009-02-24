@@ -69,43 +69,6 @@ yaxx-to-grammar.1: $(top_srcdir)/yaxx-to-grammar.in $(top_srcdir)/configure.ac
 		$(top_builddir)/yaxx-to-grammar
 EXTRA_DIST += yaxx-to-grammar.x
 
-install-yapp-to-grammar: $(top_builddir)/yaxx-to-grammar
-	rm -f $(DESTDIR)$(bindir)/yapp-to-grammar && \
-	$(LN_S) $(DESTDIR)$(bindir)/yaxx-to-grammar \
-	$(DESTDIR)$(bindir)/yapp-to-grammar || { \
-		rm -f $(DESTDIR)$(bindir)/yapp-to-grammar ; \
-		exit 1 ; \
-	}
-
-uninstall-yapp-to-grammar:
-	rm -f $(DESTDIR)$(bindir)/yapp-to-grammar
-
-install-yacc-to-grammar: $(top_builddir)/yaxx-to-grammar
-	rm -f $(DESTDIR)$(bindir)/yacc-to-grammar && \
-	$(LN_S) $(DESTDIR)$(bindir)/yaxx-to-grammar \
-	$(DESTDIR)$(bindir)/yacc-to-grammar || { \
-		rm -f $(DESTDIR)$(bindir)/yacc-to-grammar ; \
-		exit 1 ; \
-	}
-
-uninstall-yacc-to-grammar:
-	rm -f $(DESTDIR)$(bindir)/yacc-to-grammar
-
-install-bison-to-grammar: $(top_builddir)/yaxx-to-grammar
-	rm -f $(DESTDIR)$(bindir)/bison-to-grammar && \
-	$(LN_S) $(DESTDIR)$(bindir)/yaxx-to-grammar \
-	$(DESTDIR)$(bindir)/bison-to-grammar || { \
-		rm -f $(DESTDIR)$(bindir)/bison-to-grammar ; \
-		exit 1 ; \
-	}
-
-uninstall-bison-to-grammar:
-	rm -f $(DESTDIR)$(bindir)/bison-to-grammar
-
-install-exec-hook: install-yapp-to-grammar install-yacc-to-grammar install-bison-to-grammar
-
-uninstall-hook:  uninstall-yapp-to-grammar uninstall-yacc-to-grammar uninstall-bison-to-grammar
-
 ##
 ## Maintainer related targets
 ##
