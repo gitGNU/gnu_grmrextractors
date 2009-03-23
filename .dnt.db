@@ -7,9 +7,9 @@
             Rearrange the site in order to be multi-page
             </entry><entry priority="medium" start="1235480103" end="1235480132">
             Rearrange man/Makefile.am and root Makefile.am
-            </entry><entry priority="veryhigh" start="1235489859">
+            </entry><entry priority="veryhigh" start="1235489859" end="1235682678">
             Fix the NEWS and TODOs site pages generation in site/in directory
-        </entry></entry><entry priority="high" start="1233771372">
+            </entry></entry><entry priority="high" start="1233771372">
         Release 0.2.0
         <entry priority="high" start="1235431248">
             Fix the wrapper.in script in the test directory (find a better fix)
