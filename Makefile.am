@@ -193,9 +193,9 @@ MAINTAINERCLEANFILES += $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz.sig
 dist-upload: dist-gpg
 	chmod 644 $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz     &&	\
 	chmod 644 $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz.sig &&	\
-	echo scp $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz		\
+	scp $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz		\
 	    $${USER}@dl.sv.nongnu.org:/releases/grmrextractors     &&	\
-	echo scp $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz.sig	\
+	scp $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz.sig		\
 	    $${USER}@dl.sv.nongnu.org:/releases/grmrextractors     || {	\
 		exit 1 ;						\
 	}
