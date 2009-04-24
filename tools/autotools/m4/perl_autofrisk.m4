@@ -5,7 +5,7 @@
 #
 # Files matching regexps:
 #
-#  /home/francesco/Sviluppo/grammar-extractors/grammar-extractors/yaxx-to-grammar.in
+#  /home/ff0000/development/git/grmrextractors/yaxx-to-grammar.in
 #
 
 AC_DEFUN([PERL_AUTOFRISK_CHECKS],[

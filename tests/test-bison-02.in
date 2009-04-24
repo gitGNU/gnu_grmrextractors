@@ -21,6 +21,8 @@
 
 datadir=@srcdir@/data-bison-02
 
+required=""
+
 . $testdir/defs || exit 1
 
 $WRAPPER yaxx-to-grammar ./calc-parser.yy ./calc-parser.out || exit 1

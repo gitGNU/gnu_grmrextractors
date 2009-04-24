@@ -21,6 +21,8 @@
 
 datadir=@srcdir@/data-yapp-02
 
+required=""
+
 . $testdir/defs || exit 1
 
 $WRAPPER yaxx-to-grammar ./choicetool.yp ./choicetool.out || exit 1
