@@ -45,4 +45,10 @@
             Rearrange the build process in order to use EXEEXT (if needed)
         </note>
     </note>
+    <note priority="medium" time="1243950744">
+        Release 0.3.0
+    </note>
+    <note priority="low" time="1243950808">
+        Release 0.4.0
+    </note>
 </todo>
