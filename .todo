@@ -47,6 +47,9 @@
     </note>
     <note priority="medium" time="1243950744">
         Release 0.3.0
+        <note priority="medium" time="1244707993">
+            Add OMG idl extractor (we could use omniidl)
+        </note>
     </note>
     <note priority="low" time="1243950808">
         Release 0.4.0
