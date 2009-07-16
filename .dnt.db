@@ -39,4 +39,16 @@
             Rearrange the build process in order to use EXEEXT (if needed)
         </entry>
     </entry>
+    <entry priority="medium" start="1243950744">
+        Release 0.3.0
+        <entry priority="medium" start="1244707993">
+            Add OMG idl extractor (we could use omniidl)
+        </entry>
+    </entry>
+    <entry priority="low" start="1243950808">
+        Release 0.4.0
+        <entry priority="medium" start="1244669251">
+            Fix bootstrap in order to exit when a missing program is called
+        </entry>
+    </entry>
     </root>
