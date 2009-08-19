@@ -35,6 +35,9 @@ CLEANFILES =
 bin_SCRIPTS =					\
         yaxx-to-grammar
 
+bin_SRCS =					\
+	yaxx-to-grammar.in
+
 yaxx-to-grammar: Makefile yaxx-to-grammar.in
 	( rm -f $@ $@.tmp && \
 	  $(do_subst) < $(srcdir)/yaxx-to-grammar.in > $@.tmp && \
@@ -256,4 +259,4 @@ maintainer-check-parameters: Makefile $(bin_SCRIPTS)
 	done
 
 maintainer-check-local: Makefile maintainer-check-parameters
-	$(WHITESPACE_DETECT)  $(bin_SCRIPTS)
+	$(WHITESPACE_DETECT)  $(bin_SRCS)
