@@ -35,8 +35,7 @@ DOWNLOAD =					\
 	ax_with_prog.m4
 
 MACROS =					\
-	$(DOWNLOAD)				\
-	ax_prog_perl_modules.m4
+	$(DOWNLOAD)
 
 update-local: Makefile
 	rm -r -f fetch-dir && \
