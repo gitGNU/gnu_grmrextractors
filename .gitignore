@@ -33,6 +33,8 @@ Makefile
 /tools/autotools/mdate-sh
 /tools/autotools/texinfo.tex
 
+/tools/autotools/m4/perl-autofrisk-data.m4
+
 /tools/maint/fetch
 /tools/maint/whitespace-detect
 /tools/maint/gitlog-to-committers
