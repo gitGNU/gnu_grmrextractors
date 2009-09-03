@@ -20,7 +20,11 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-AC_INIT([Grammar Extractors],[@VERSION@],[salvestrini@gmail.com],[grammar-extractors])
+AC_INIT([Grammar Extractors],
+        m4_esyscmd([tools/maint/git-version-gen .tarball-version]),
+        [salvestrini@gmail.com],
+        [grammar-extractors],
+        [http://savannah.nongnu.org/projects/grmrextractors])
 
 # Check for a recent version of autoconf
 AC_PREREQ([2.64])
