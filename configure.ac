@@ -49,13 +49,11 @@ AC_PROG_LN_S
 AC_PROG_MKDIR_P
 AC_PROG_GREP
 AC_PROG_SED
-AC_PROG_AWK
 
-AX_PATH_MISSING([HELP2MAN],       [help2man])
-AX_PATH_MISSING([SITETOOL],       [sitetool])
-AX_PATH_MISSING([WGET],           [wget])
-AX_PATH_MISSING([DNT],            [dnt])
-AX_PATH_MISSING([DEVTODO_TO_DNT], [devtodo-to-dnt])
+AX_PATH_MISSING([HELP2MAN], [help2man])
+AX_PATH_MISSING([SITETOOL], [sitetool])
+AX_PATH_MISSING([WGET],     [wget])
+AX_PATH_MISSING([DNT],      [dnt])
 
 #
 # Runtime related programs
