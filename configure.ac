@@ -22,7 +22,7 @@
 
 AC_INIT([Grammar Extractors],
         m4_esyscmd([tools/maint/git-version-gen .tarball-version]),
-        [salvestrini@gmail.com],
+        [grmrextractors-generic@nongnu.org],
         [grammar-extractors],
         [http://savannah.nongnu.org/projects/grmrextractors])
 
