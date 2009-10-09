@@ -54,6 +54,9 @@
 				</entry>
 			</entry>
 		</entry>
+		<entry end="1255091010" priority="medium" start="1255091004">
+			Grouped as external some site files and added a target to fetch them
+		</entry>
 	</entry>
 	<entry priority="high" start="1233771372">
 		Release 0.2.0
