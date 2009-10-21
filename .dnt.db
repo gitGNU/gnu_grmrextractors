@@ -33,7 +33,7 @@
 				Done
 			</comment>
 		</entry>
-		<entry priority="veryhigh" start="1252443500">
+		<entry end="1256059574" priority="veryhigh" start="1252443500">
 			Rearrange the build-related code (macros, makefiles, bootstrap, gnulib-use)
 		</entry>
 		<entry priority="high" start="1253138946">
