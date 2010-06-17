@@ -136,7 +136,7 @@
         </li>
         
           
-            <li class="for-notforked" style="display:none"><a href="/salvestrini/build-utils/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '1258d32836e05e35f9eff01935acee393f9a1ce6'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
+            <li class="for-notforked" style="display:none"><a href="/salvestrini/build-utils/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'd2d0c995af4879b3ef839630742ce877c5fd0c70'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
             <li class="for-hasfork" style="display:none"><a href="#" class="minibutton btn-fork " id="your_fork_button"><span><span class="icon"></span>Your Fork</span></a></li>
           
 
@@ -240,7 +240,7 @@
         
       </div>
       <div id="repository_description_edit" style="display:none;" class="inline-edit">
-        <form action="/salvestrini/build-utils/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="1258d32836e05e35f9eff01935acee393f9a1ce6" /></div>
+        <form action="/salvestrini/build-utils/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="d2d0c995af4879b3ef839630742ce877c5fd0c70" /></div>
           <input type="hidden" name="field" value="repository_description">
           <input type="text" class="textfield" name="value" value="Autotools build related utilities (scripts, macros, Makefile.am snippets and so on...)">
           <div class="form-actions">
@@ -254,7 +254,7 @@
         <p><a href="http://" rel="nofollow"></a></p>
       </div>
       <div id="repository_homepage_edit" style="display:none;" class="inline-edit">
-        <form action="/salvestrini/build-utils/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="1258d32836e05e35f9eff01935acee393f9a1ce6" /></div>
+        <form action="/salvestrini/build-utils/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="d2d0c995af4879b3ef839630742ce877c5fd0c70" /></div>
           <input type="hidden" name="field" value="repository_homepage">
           <input type="text" class="textfield" name="value" value="">
           <div class="form-actions">
@@ -509,7 +509,7 @@
           <div class="company">
             &copy;
             2010
-            <span id="_rrt" title="0.04319s from fe3.rs.github.com">GitHub</span> Inc.
+            <span id="_rrt" title="0.07752s from fe2.rs.github.com">GitHub</span> Inc.
             All rights reserved. |
             <a href="/site/terms">Terms of Service</a> |
             <a href="/site/privacy">Privacy Policy</a>
@@ -528,7 +528,7 @@
       </div>
     </div>
 
-    <script>window._auth_token = "1258d32836e05e35f9eff01935acee393f9a1ce6"</script>
+    <script>window._auth_token = "d2d0c995af4879b3ef839630742ce877c5fd0c70"</script>
     
 
     <script type="text/javascript">
